@@ -21,13 +21,13 @@ style_name = st.sidebar.selectbox(
 )
 
 
-model= "saved_models/" + style_name + ".pth"
+model = "saved_models/" + style_name + ".pth"
 input_image = "images/content-images/" + img
 output_image = "images/output-images/" + style_name + "-" + img
 
 st.write('### Source image:')
 image = Image.open(input_image)
-st.image(image, width=400) # image: numpy array
+st.image(image, width=400)  # image: numpy array
 
 clicked = st.button('Stylize')
 
@@ -38,4 +38,3 @@ if clicked:
     st.write('### Output image:')
     image = Image.open(output_image)
     st.image(image, width=400)
-
